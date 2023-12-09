@@ -15,7 +15,7 @@ https://icons.binaryblazer.me/icons/icon-name/icon-name.svg
 ```
 
 > [!WARNING]
-> Replace icon-name with the name of the icon you want to use
+> Replace ``icon-name`` with the name of the icon you want to use
 
 ## 💕 Special Thanks
 Special thanks to [feather](https://feathericons.com/) for providing the icons.
