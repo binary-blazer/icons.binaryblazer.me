@@ -1,0 +1,30 @@
+{
+  "name": "icons.binaryblazer.me",
+  "version": "1.0.0",
+  "description": "🛰️ Icons API for my portfolio",
+  "main": "public/js/generate.js",
+  "scripts": {
+    "app:generate": "node public/js/generate.js",
+    "app:remove": "node public/js/remove.js",
+    "format:check": "prettier --check public/js/*.js",
+    "format:write": "prettier --write public/js/*.js",
+    "lint:check": "eslint public/js/*.js",
+    "lint:write": "eslint --fix public/js/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jonas Franke <@binaryblazer>",
+    "url": "https://binaryblazer.me"
+  },
+  "type": "module",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "prettier": "3.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "feather-icons": "^4.29.1"
+  }
+}
