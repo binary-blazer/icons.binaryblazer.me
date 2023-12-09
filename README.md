@@ -14,7 +14,7 @@ You can use the icons in this repository by using the following URL:
 https://icons.binaryblazer.me/icons/icon-name/icon-name.svg
 ```
 
-> ![WARNING]
+> [!WARNING]
 > Replace icon-name with the name of the icon you want to use
 
 ## 💕 Special Thanks
