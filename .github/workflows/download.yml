@@ -29,6 +29,7 @@ jobs:
         run: pnpm install
       - name: 🤖 Run system
         run: pnpm app:generate
+        working-directory: ./public
       - name: ☑️ Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
