@@ -14,7 +14,7 @@ icons.forEach((icon) => {
 
 icons.forEach((icon) => {
   const folder = path.resolve(`./icons/${icon}`);
-  fs.mkdirSync(folder);
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder);
 
   const svg = feather.icons[icon].toSvg();
   const file = path.resolve(`./icons/${icon}/${icon}.svg`);
