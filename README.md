@@ -13,6 +13,7 @@ You can use the icons in this repository by using the following URL:
 ```bash
 https://icons.binaryblazer.me/icons/icon-name/icon-name.svg
 ```
+(Replace `icon-name` with the name of the icon you want to use)
 
 ## 💕 Special Thanks
 Special thanks to [feather](https://feathericons.com/) for providing the icons.
