@@ -1,0 +1,38 @@
+name: Download Icons
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        node: [18.x]
+    steps:
+      - name: 🧱 Checkout repository
+        uses: actions/checkout@v4
+      - name: 🔩 Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: 🔩 Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "pnpm"
+      - name: 🚀 Install dependencies
+        run: pnpm install
+      - name: 🤖 Run system
+        run: pnpm app:generate
+      - name: ☑️ Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[➡️] Update icons"
+          branch: ${{ github.head_ref }}
+          commit_user_name: binary-blazer
+          commit_user_email: jonasfranke@sdevs.org
