@@ -1,8 +1,8 @@
-name: Download Icons
+name: Update Icons
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -27,12 +27,18 @@ jobs:
           cache: "pnpm"
       - name: 🚀 Install dependencies
         run: pnpm install
-      - name: 🤖 Run system
+      - name: ✨ Remove icons
+        run: pnpm app:remove
+      - name: ☑️ Commit Changes
+        run: |
+          git add .
+          git commit -m "[✨] removed icons"
+      - name: 🚀 Generate new icons
         run: pnpm app:generate
       - name: ☑️ Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[➡️] Update icons"
+          commit_message: "[🚀] updated icons"
           branch: ${{ github.head_ref }}
           commit_user_name: binary-blazer
           commit_user_email: jonasfranke@sdevs.org
