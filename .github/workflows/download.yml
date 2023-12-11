@@ -29,13 +29,16 @@ jobs:
         run: pnpm install
       - name: ✨ Remove icons
         run: pnpm app:remove
-      - name: ☑️ Commit Changes
-        run: |
-          git add .
-          git commit -m "[✨] removed icons"
+      - name: ☑️ Commit Changes (removed icons)
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[✨] removed icons"
+          branch: ${{ github.head_ref }}
+          commit_user_name: binary-blazer
+          commit_user_email: jonasfranke@sdevs.org
       - name: 🚀 Generate new icons
         run: pnpm app:generate
-      - name: ☑️ Commit Changes
+      - name: ☑️ Commit Changes (generated icons)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[🚀] updated icons"
