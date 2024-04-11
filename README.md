@@ -1,3 +1,5 @@
+![icons.binaryblazer.me](https://raw.githubusercontent.com/binary-blazer/repo-svgs/main/out/icons.binaryblazer.me/image.svg)
+
 # 🛰️ icons.binaryblazer.me
 The official repository for all the icons my portfolio and my future, past and current projects use and or used.
 
